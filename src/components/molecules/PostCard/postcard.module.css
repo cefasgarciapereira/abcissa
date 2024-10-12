@@ -27,8 +27,8 @@
 
 @media (min-width: 1024px) {
   .postCard {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
     align-items: flex-start;
-    justify-content: space-between;
   }
 }
