@@ -14,7 +14,7 @@ export default function PostCard(props: PostCardProps) {
   return (
     <div className={styles.postCard}>
       <time dateTime={props.datetime}>{convertDatetimeToDate(props.datetime)}</time>
-      <div>
+      <div className={styles.content}>
         <Link className={styles.title} href={`/posts/${props.slug}`}>{props.title}</Link>
         <p className={styles.description}>
           {props.description}

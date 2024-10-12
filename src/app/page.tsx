@@ -1,17 +1,24 @@
 import PostCard from "@/components/molecules/PostCard";
 
-const mockData = {
-  title: 'O último prgrama do último programa do mundo',
-  slug: 'o-ultimo-programa-do-ultimo-programa-do-mundo',
-  datetime: "2024-10-11T23:25:30-03:00",
-  description: "“É claro que é politicamente importante “contestar” as várias formas de poder e dominação: estas últimas, contudo, não podem ser compreendidas a menos que suas relações funcionais com a exploração econômica sejam articulada” (Frederic Jameson)“[Kurt] Cobain sabia que ele era apenas mais uma peça do espetáculo, que nada funcionava melhor na MTV do que um…"
-}
+import { createClient } from "@/prismicio";
 
-export default function Home() {
+export default async function Home() {
+  const client = createClient();
+  const posts = await client.getAllByType("post")
+
   return (
-    <h1 className="header">
-      <PostCard {...mockData} />
-      <PostCard {...mockData} />
-    </h1>
+    <div>
+      {
+        posts.map(post => (
+          <PostCard
+            key={post.uid}
+            title={post.data.title || ""}
+            datetime={post.data.datetime || ""}
+            slug={post.uid}
+            description={post.data.description || ""}
+          />
+        ))
+      }
+    </div>
   );
 }

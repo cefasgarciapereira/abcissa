@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Menu, X } from "@geist-ui/icons";
 import Link from "next/link";
 
-import styles from "./header.module.css";
+import styles from "./mobile.module.css";
 import settings from "./settings";
 
 export default function Mobile() {

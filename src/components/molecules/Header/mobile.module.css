@@ -1,28 +1,29 @@
-.wrapper{
+.wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem;
-
+  margin-bottom: 4rem;
 }
 
-.logo{
+.logo {
   font-family: "Josefin Sans";
   cursor: pointer;
 }
 
-.button{
+.button {
   all: unset;
   align-self: flex-end;
   margin-bottom: 2rem;
 }
 
-.button:hover{
+.button:hover {
   cursor: pointer;
 }
 
-.openMenu{
+.openMenu {
   position: fixed;
+  left: 0;
+  top: 0;
   width: 100vw;
   height: 100vh;
   background-color: var(--foreground);
@@ -32,17 +33,23 @@
   flex-direction: column;
 }
 
-.openMenu ul{
+.openMenu ul {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
-.openMenu ul li{
+.openMenu ul li {
   list-style: none;
   padding-left: 0;
 }
 
-.openMenu ul li a{
+.openMenu ul li a {
   font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    display: none;
+  }
 }

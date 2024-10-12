@@ -18,8 +18,8 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body>
-        <Header />
         <div className={styles.wrapper}>
+          <Header />
           {children}
         </div>
       </body>

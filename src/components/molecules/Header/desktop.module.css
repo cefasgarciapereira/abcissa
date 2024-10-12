@@ -1,0 +1,27 @@
+.desktop{
+  display: none;
+}
+
+.links ul{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.links ul li{
+  all: unset;
+}
+
+.links ul li a{
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .desktop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+  }
+}
