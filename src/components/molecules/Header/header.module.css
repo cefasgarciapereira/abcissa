@@ -1,0 +1,48 @@
+.wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+
+}
+
+.logo{
+  font-family: "Josefin Sans";
+  cursor: pointer;
+}
+
+.button{
+  all: unset;
+  align-self: flex-end;
+  margin-bottom: 2rem;
+}
+
+.button:hover{
+  cursor: pointer;
+}
+
+.openMenu{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--foreground);
+  color: black;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.openMenu ul{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.openMenu ul li{
+  list-style: none;
+  padding-left: 0;
+}
+
+.openMenu ul li a{
+  font-size: 1rem;
+}

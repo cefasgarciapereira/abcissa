@@ -1,0 +1,26 @@
+.postCard{
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  margin-bottom: 4rem;
+}
+
+.postCard time{
+  font-size: 1rem;
+  font-weight: 100;
+}
+
+.title{
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-family: "Josefin Sans";
+  line-height: 1.125;
+  font-weight: 400;
+}
+
+.description{
+  font-size: 1rem;
+  font-weight: 100;
+  line-height: calc(1em + 0.375rem);
+  margin-top: 2.4rem;
+}
